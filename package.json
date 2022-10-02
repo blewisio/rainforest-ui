@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "yet another React component library",
   "license": "ISC",
-  "files": ["./dist"],
+  "files": ["dist/*"],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "repository": {
