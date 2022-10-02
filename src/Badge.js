@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Button = ({ children, ...others }) => {
+const Badge = ({ children, ...others }) => {
   return (
-    <button {...others}>
+    <span {...others}>
       {children}
-    </button>
+    </span>
   );
 };
 
-Button.propTypes = {
+Badge.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export { Button };
+export { Badge };

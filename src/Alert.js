@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Button = ({ children, ...others }) => {
+const Alert = ({ children, ...others }) => {
   return (
-    <button {...others}>
+    <div {...others}>
       {children}
-    </button>
+    </div>
   );
 };
 
-Button.propTypes = {
+Alert.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export { Button };
+export { Alert };

@@ -3,7 +3,9 @@
   "version": "0.2.1",
   "description": "yet another React component library",
   "license": "ISC",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "repository": {
@@ -32,11 +34,18 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
     "eslint": "^8.24.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "rollup": "^2.79.1",
     "webpack": "^5.74.0"
   },
   "peerDependencies": {
     "react": ">=16.8",
     "react-dom": ">=16.8"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
   }
 }
