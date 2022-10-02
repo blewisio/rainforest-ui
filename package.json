@@ -1,0 +1,30 @@
+{
+  "name": "rainforest-ui",
+  "version": "0.1.0",
+  "description": "yet another React component library",
+  "license": "ISC",
+  "files": [],
+  "scripts": {
+    "build": "rollup",
+    "build:storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
+    "rollup": "^2.79.1",
+    "webpack": "^5.74.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
+  }
+}
