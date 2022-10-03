@@ -1,9 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { css, cx } from '@emotion/css';
 
-const Badge = ({ children, ...others }) => {
+const Badge = ({ children, className = '', ...others }) => {
+  const styles = css`
+    background: #fff;
+    border: 1px #222 solid;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 0.875rem;
+  `;
+
+  const classNames = cx(styles, className);
+
   return (
-    <span {...others}>
+    <span className={classNames} {...others}>
       {children}
     </span>
   );
@@ -11,6 +22,7 @@ const Badge = ({ children, ...others }) => {
 
 Badge.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export { Badge };
