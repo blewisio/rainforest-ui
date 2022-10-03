@@ -1,7 +1,6 @@
 import React from 'react';
 import { Alert } from '../src/Alert.js';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Example/Alert',
   component: Alert,

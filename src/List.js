@@ -2,25 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { css, cx } from '@emotion/css';
 
-const Alert = ({ children, className = '', ...others }) => {
-  const styles = css`
-    width: 100%;
-    padding: 16px;
-    border: 1px #222 solid;
-  `;
-
+const List = ({ children, className = '', ...others }) => {
+  const styles = css``;
   const classNames = cx(styles, className);
 
   return (
-    <div className={classNames} {...others}>
+    <ul {...others} className={classNames}>
       {children}
-    </div>
+    </ul>
   );
 };
 
-Alert.propTypes = {
+List.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 
-export { Alert };
+export { List };

@@ -4,14 +4,23 @@ import { css, cx } from '@emotion/css';
 
 const Button = ({ children, className = '', ...others }) => {
   const styles = css`
-    background: #fff;
-    border: 1px #222 solid;
+    padding: 12px 26px;
+    background: rgb(42, 68, 146);
+    color: #fff;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    padding: 16px 24px;
     font-size: 1.2rem;
+    font-weight: 700;
+    transition: background 0.1s ease-in;
+
     &:hover {
-      background: #eee;
+      background: rgb(29, 47, 101);
+    }
+
+    &:disabled {
+      background: #555;
+      cursor: not-allowed;
     }
   `;
 

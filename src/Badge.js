@@ -4,11 +4,12 @@ import { css, cx } from '@emotion/css';
 
 const Badge = ({ children, className = '', ...others }) => {
   const styles = css`
-    background: #fff;
-    border: 1px #222 solid;
-    border-radius: 4px;
-    padding: 4px;
+    background: rgb(42, 68, 146);
+    color: #fff;
+    padding: 4px 6px;
     font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
   `;
 
   const classNames = cx(styles, className);
