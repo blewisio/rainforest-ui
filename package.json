@@ -11,6 +11,7 @@
     "./Alert": "./Alert.js",
     "./Badge": "./Badge.js",
     "./Button": "./Button.js",
+    "./Card": "./Card.js",
     "./Checkbox": "./Checkbox.js",
     "./Dropdown": "./Dropdown.js",
     "./Heading": "./Heading.js",
