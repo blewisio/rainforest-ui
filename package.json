@@ -3,11 +3,25 @@
   "version": "0.5.1",
   "description": "yet another React component library",
   "license": "ISC",
+  "type": "module",
   "files": [
-    "dist/*"
+    "/*"
   ],
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "exports": {
+    "./Alert": "./Alert.js",
+    "./Badge": "./Badge.js",
+    "./Button": "./Button.js",
+    "./Checkbox": "./Checkbox.js",
+    "./Dropdown": "./Dropdown.js",
+    "./Heading": "./Heading.js",
+    "./Label": "./Label.js",
+    "./Link": "./Link.js",
+    "./List": "./List.js",
+    "./ListItem": "./ListItem.js",
+    "./RadioButton": "./RadioButton.js",
+    "./StarRating": "./StarRating.js",
+    "./TextField": "./TextField.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blewisio/rainforest-ui.git"
@@ -16,6 +30,7 @@
     "build": "rollup --config rollup.config.js",
     "build:storybook": "build-storybook",
     "lint": "eslint src",
+    "release": "npm run build && cp package.json dist && cd dist && npm publish",
     "storybook": "start-storybook -p 6006"
   },
   "devDependencies": {
