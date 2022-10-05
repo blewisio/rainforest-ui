@@ -1,5 +1,6 @@
 import React from 'react';
 import { List } from '../src/List.js';
+import { ListItem } from '../src/ListItem.js';
 
 export default {
   title: 'Example/List',
@@ -16,5 +17,5 @@ const Template = (args) => <List {...args} />;
 export const Component = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Component.args = {
-  children: <li>a list item</li>
+  children: <ListItem>a list item</ListItem>
 };

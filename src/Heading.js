@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-heading';
 
 const Heading = ({ children, className = '', level, ...others }) => {
-  const styles = css`
-    letter-spacing: 0.025rem;
-  `;
-
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   switch (level) {
     case 1:
@@ -53,7 +53,10 @@ const Heading = ({ children, className = '', level, ...others }) => {
         </div>
       );
   }
+};
 
+const styles = {
+  letterSpacing: '0.025rem',
 };
 
 Heading.propTypes = {

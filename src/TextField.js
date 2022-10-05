@@ -1,16 +1,21 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-textField';
 
 const TextField = ({ className = '', ...others }) => {
-  const styles = css`
-    padding: 10px;
-  `;
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   return (
     <input type="text" className={classNames} {...others} />
   );
+};
+
+const styles = {
+  padding: '10px',
 };
 
 TextField.propTypes = {

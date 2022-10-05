@@ -1,15 +1,20 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'cf-radio';
 
 const RadioButton = ({ className = '', ...others }) => {
-  const styles = css``;
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   return (
     <input type="radio" className={classNames} {...others} />
   );
 };
+
+const styles = {};
 
 RadioButton.propTypes = {
   className: PropTypes.string,

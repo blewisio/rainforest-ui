@@ -1,22 +1,26 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-card';
 
 const Card = ({ children, className = '', ...others }) => {
-  const styles = css`
-    padding: 20px;
-    background: #fff;
-    border: 1px #bbb solid;
-    boxShadow: 0px 5px 12px #ddd;
-  `;
-
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   return (
     <div {...others} className={classNames}>
       {children}
     </div>
   );
+};
+
+const styles = {
+  padding: '20px',
+  background: '#fff',
+  border: '1px #bbb solid',
+  boxShadow: '0px 5px 12px #ddd',
 };
 
 Card.propTypes = {

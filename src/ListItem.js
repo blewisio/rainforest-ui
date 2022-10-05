@@ -1,16 +1,23 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-listItem';
 
 const ListItem = ({ children, className = '', ...others }) => {
-  const styles = css``;
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   return (
     <li {...others} className={classNames}>
       {children}
     </li>
   );
+};
+
+const styles = {
+  listStyleType: 'none',
 };
 
 ListItem.propTypes = {

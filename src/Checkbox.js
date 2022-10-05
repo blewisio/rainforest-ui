@@ -1,15 +1,20 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-checkbox';
 
 const Checkbox = ({ className = '', ...others }) => {
-  const styles = css``;
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   return (
     <input type="checkbox" className={classNames} {...others} />
   );
 };
+
+const styles = {};
 
 Checkbox.propTypes = {
   className: PropTypes.string,

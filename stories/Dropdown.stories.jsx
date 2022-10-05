@@ -15,4 +15,6 @@ const Template = (args) => <Dropdown {...args} />;
 
 export const Component = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Component.args = {};
+Component.args = {
+  children: <option>foo</option>
+};

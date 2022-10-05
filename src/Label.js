@@ -1,10 +1,13 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-label';
 
 const Label = ({ children, className = '', ...others }) => {
-  const styles = css``;
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   return (
     <label className={classNames} {...others}>
@@ -12,6 +15,8 @@ const Label = ({ children, className = '', ...others }) => {
     </label>
   );
 };
+
+const styles = {};
 
 Label.propTypes = {
   children: PropTypes.node.isRequired,

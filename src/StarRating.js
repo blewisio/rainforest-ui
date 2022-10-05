@@ -1,14 +1,13 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { useStyle } from './useStyle.js';
+
+const cls = 'rf-starRating';
 
 const StarRating = ({ className = '', stars, ...others }) => {
-  const styles = css`
-    color: rgb(42, 68, 146);
-    font-size: 2rem;
-  `;
-
-  const classNames = cx(styles, className);
+  useStyle(cls, styles);
+  const classNames = clsx(cls, className);
 
   const render = ['★', '★', '★', '★', '★'].fill('☆', stars, 5);
 
@@ -17,6 +16,12 @@ const StarRating = ({ className = '', stars, ...others }) => {
       {render}
     </span>
   );
+};
+
+const styles = {
+  color: 'rgb(42, 68, 146)',
+  fontSize:' 2rem',
+  cursor: 'default',
 };
 
 StarRating.propTypes = {
