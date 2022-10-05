@@ -31,7 +31,7 @@
     "build": "rollup --config rollup.config.js",
     "build:storybook": "build-storybook",
     "lint": "eslint src",
-    "release": "npm run build && cp package.json dist && cd dist && npm publish",
+    "release": "rm -rf dist && npm run build && cp package.json dist && cp readme.md dist && cd dist && npm publish",
     "storybook": "start-storybook -p 6006"
   },
   "devDependencies": {
