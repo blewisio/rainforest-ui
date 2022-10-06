@@ -1,21 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useStyle } from './useStyle.js';
-
-const cls = 'rf-textField';
+import './TextField.css';
 
 const TextField = ({ className = '', ...others }) => {
-  useStyle(cls, styles);
-  const classNames = clsx(cls, className);
+  const classNames = clsx('rf-textField', className);
 
   return (
     <input type="text" className={classNames} {...others} />
   );
-};
-
-const styles = {
-  padding: '10px',
 };
 
 TextField.propTypes = {

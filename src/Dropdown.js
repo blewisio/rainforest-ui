@@ -1,13 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useStyle } from './useStyle.js';
-
-const cls = 'rf-dropdown';
+import './Dropdown.css';
 
 const Dropdown = ({ children, className = '', ...others }) => {
-  useStyle(cls, styles);
-  const classNames = clsx(cls, className);
+  const classNames = clsx('rf-dropdown', className);
 
   return (
     <select className={classNames} {...others}>
@@ -15,8 +12,6 @@ const Dropdown = ({ children, className = '', ...others }) => {
     </select>
   );
 };
-
-const styles = {};
 
 Dropdown.propTypes = {
   children: PropTypes.node.isRequired,

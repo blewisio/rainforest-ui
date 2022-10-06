@@ -1,0 +1,8 @@
+.rf-link {
+  color: rgb(42, 68, 146);
+  transition: color 0.2s ease-out;
+}
+
+.rf-link:hover {
+  color: rgb(29, 47, 101);
+}

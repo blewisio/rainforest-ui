@@ -1,13 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useStyle } from './useStyle.js';
-
-const cls = 'rf-label';
+import './Label.css';
 
 const Label = ({ children, className = '', ...others }) => {
-  useStyle(cls, styles);
-  const classNames = clsx(cls, className);
+  const classNames = clsx('rf-label', className);
 
   return (
     <label className={classNames} {...others}>
@@ -15,8 +12,6 @@ const Label = ({ children, className = '', ...others }) => {
     </label>
   );
 };
-
-const styles = {};
 
 Label.propTypes = {
   children: PropTypes.node.isRequired,

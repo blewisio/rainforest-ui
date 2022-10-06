@@ -1,5 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
 export default [{
@@ -30,6 +31,9 @@ export default [{
     babel({
       babelHelpers: 'bundled',
       presets: ['@babel/preset-react'],
+    }),
+    postcss({
+      extract: true,
     }),
     terser(),
   ],

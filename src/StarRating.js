@@ -1,13 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useStyle } from './useStyle.js';
-
-const cls = 'rf-starRating';
+import './StarRating.css';
 
 const StarRating = ({ className = '', stars, ...others }) => {
-  useStyle(cls, styles);
-  const classNames = clsx(cls, className);
+  const classNames = clsx('rf-starRating', className);
 
   const render = ['★', '★', '★', '★', '★'].fill('☆', stars, 5);
 
@@ -16,12 +13,6 @@ const StarRating = ({ className = '', stars, ...others }) => {
       {render}
     </span>
   );
-};
-
-const styles = {
-  color: 'rgb(42, 68, 146)',
-  fontSize:' 2rem',
-  cursor: 'default',
 };
 
 StarRating.propTypes = {

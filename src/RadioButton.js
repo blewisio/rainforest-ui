@@ -1,20 +1,15 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useStyle } from './useStyle.js';
-
-const cls = 'cf-radio';
+import './RadioButton.css';
 
 const RadioButton = ({ className = '', ...others }) => {
-  useStyle(cls, styles);
-  const classNames = clsx(cls, className);
+  const classNames = clsx('rf-radioButton', className);
 
   return (
     <input type="radio" className={classNames} {...others} />
   );
 };
-
-const styles = {};
 
 RadioButton.propTypes = {
   className: PropTypes.string,

@@ -1,13 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useStyle } from './useStyle.js';
-
-const cls = 'rf-heading';
+import './Heading.css';
 
 const Heading = ({ children, className = '', level, ...others }) => {
-  useStyle(cls, styles);
-  const classNames = clsx(cls, className);
+  const classNames = clsx('rf-heading', className);
 
   switch (level) {
     case 1:
@@ -53,10 +50,6 @@ const Heading = ({ children, className = '', level, ...others }) => {
         </div>
       );
   }
-};
-
-const styles = {
-  letterSpacing: '0.025rem',
 };
 
 Heading.propTypes = {
