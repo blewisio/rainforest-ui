@@ -9,6 +9,7 @@ export default [{
     './src/Alert.js',
     './src/Badge.js',
     './src/Button.js',
+    './src/ButtonLink.js',
     './src/Card.js',
     './src/Checkbox.js',
     './src/Dropdown.js',

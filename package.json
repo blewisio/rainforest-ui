@@ -10,6 +10,7 @@
     "./Alert": "./Alert.js",
     "./Badge": "./Badge.js",
     "./Button": "./Button.js",
+    "./ButtonLink": "./ButtonLink.js",
     "./Card": "./Card.js",
     "./Checkbox": "./Checkbox.js",
     "./Dropdown": "./Dropdown.js",
