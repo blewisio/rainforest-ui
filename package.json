@@ -28,9 +28,11 @@
   },
   "scripts": {
     "build": "rollup --config rollup.config.js",
+    "build:clean": "rm -rf dist/",
+    "build:post": "rm dist/bundle.css && cp package.json readme.md src/*.css dist/",
     "build:storybook": "build-storybook",
     "lint": "eslint src",
-    "release": "rm -rf dist && npm run build && cp package.json dist && cp readme.md dist && cd dist && npm publish",
+    "release": "npm run build:clean && npm run build && npm run build:post && cd dist && npm publish",
     "storybook": "start-storybook -p 6006"
   },
   "devDependencies": {

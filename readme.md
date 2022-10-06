@@ -4,8 +4,22 @@ Yet another React component library
 
 ## Usage
 
+Install:
 ```sh
 npm install rainforest-ui
+```
+
+Use:
+```js
+import { Button } from 'rainforest-ui/Button';
+
+// ...
+
+return (
+  <Button type="submit" onClick={handleSubmit}>
+    Submit
+  </Button>
+);
 ```
 
 ## Components
@@ -13,6 +27,7 @@ npm install rainforest-ui
 * Alert
 * Badge
 * Button
+* Card
 * Checkbox
 * Dropdown
 * Heading
