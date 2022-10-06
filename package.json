@@ -3,6 +3,7 @@
   "version": "0.7.1",
   "description": "yet another React component library",
   "license": "ISC",
+  "type": "module",
   "files": [
     "/*"
   ],
