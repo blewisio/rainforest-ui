@@ -31,7 +31,7 @@
   "scripts": {
     "build": "rollup --config rollup.config.js",
     "build:clean": "rm -rf dist/",
-    "build:post": "rm dist/bundle.css && cp package.json readme.md src/*.css dist/",
+    "build:post": "rm dist/bundle.css && cp package.json readme.md src/*.css dist/ && npx clean-css-cli --batch --batch-suffix '' dist/*.css",
     "build:storybook": "build-storybook",
     "lint": "eslint src",
     "release": "npm run build:clean && npm run build && npm run build:post && cd dist && npm publish",
